@@ -1,4 +1,6 @@
+import useWindowSize from '../hooks/useWindowSize'
 function Contact() {
+  const { isMobile } = useWindowSize() 
   return (
     <section id="contact" style={{ width: '1478px', height: '319px', backgroundColor: '#c8ff00', borderRadius: '10px', padding: '48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '20px', boxSizing: 'border-box' }}>
 

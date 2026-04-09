@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
+import useWindowSize from '../hooks/useWindowSize'
 function ContactPage() {
+  const { isMobile } = useWindowSize() 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')

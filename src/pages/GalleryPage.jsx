@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
+import useWindowSize from '../hooks/useWindowSize'
 import g1 from '../assets/gallery/g1.png'
 import g2 from '../assets/gallery/g2.png'
 import g3 from '../assets/gallery/g3.png'
@@ -80,6 +80,7 @@ const BIG_HEIGHT = '358px'
 const SMALL_HEIGHT = '201px'
 
 function GalleryColumn({ items, isFirst }) {
+  const { isMobile } = useWindowSize() 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10.73px', flex: 1, minWidth: 0 }}>
       {isFirst && (

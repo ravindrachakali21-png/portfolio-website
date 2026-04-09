@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png'
-
+import useWindowSize from '../hooks/useWindowSize'
 function Footer() {
+  const { isMobile } = useWindowSize() 
   return (
     <footer style={{ width: '1478px', height: '331px', backgroundColor: '#1a1a1a', borderTopLeftRadius: '20px', borderTopRightRadius: '20px', paddingTop: '54px', paddingBottom: '54px', paddingLeft: '50px', paddingRight: '50px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
 

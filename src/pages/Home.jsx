@@ -4,8 +4,9 @@ import About from '../components/About'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-
+import useWindowSize from '../hooks/useWindowSize'
 function Home() {
+  const { isMobile } = useWindowSize() 
   return (
     <div style={{ backgroundColor: '#0d0d0d', minHeight: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Navbar />

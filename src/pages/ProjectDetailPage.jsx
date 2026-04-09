@@ -5,7 +5,7 @@ import techIcons from '../assets/tech-icons.png'
 import project1 from '../assets/project1.png'
 import project2 from '../assets/project2.png'
 import project3 from '../assets/project3.png'
-
+import useWindowSize from '../hooks/useWindowSize'
 const projects = [
   {
     id: 1, title: 'Portfolio', type: 'Frontend', img: project1,
@@ -73,6 +73,7 @@ const projects = [
 ]
 
 function ProjectDetailPage() {
+  const { isMobile } = useWindowSize() 
   const { id } = useParams()
   const navigate = useNavigate()
   const project = projects.find((p) => p.id === parseInt(id))

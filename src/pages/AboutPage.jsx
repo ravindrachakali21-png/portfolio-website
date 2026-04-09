@@ -9,7 +9,7 @@ import skillPremiere from '../assets/skill-premiere.png'
 import skillReact from '../assets/skill-react.png'
 import skillFigma from '../assets/skill-figma.png'
 import skillMui from '../assets/skill-materialui.png'
-
+import useWindowSize from '../hooks/useWindowSize'
 const skills = [
   { img: skillCss, name: 'CSS3' },
   { img: skillTailwind, name: 'Tailwind' },
@@ -21,6 +21,7 @@ const skills = [
 ]
 
 function AboutPage() {
+  const { isMobile } = useWindowSize() 
   return (
     <div style={{ backgroundColor: '#0d0d0d', minHeight: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Navbar />

@@ -2,7 +2,7 @@ import techIcons from '../assets/tech-icons.png'
 import project1 from '../assets/project1.png'
 import project2 from '../assets/project2.png'
 import project3 from '../assets/project3.png'
-
+import useWindowSize from '../hooks/useWindowSize'
 const projects = [
   {
     title: 'Portfolio',
@@ -25,6 +25,7 @@ const projects = [
 ]
 
 function Projects() {
+  const { isMobile } = useWindowSize() 
   return (
     <section id="projects" style={{ width: '1478px', display: 'flex', flexDirection: 'column', gap: '20px', boxSizing: 'border-box' }}>
 

@@ -1,4 +1,6 @@
+import useWindowSize from '../hooks/useWindowSize'
 function About() {
+  const { isMobile } = useWindowSize() 
   return (
     <section id="about" style={{ width: '1478px', backgroundColor: '#c8ff00', borderRadius: '10px', paddingTop: '50px', paddingBottom: '50px', paddingLeft: '100px', paddingRight: '100px', display: 'flex', flexDirection: 'column', gap: '10px', boxSizing: 'border-box' }}>
       <h2 style={{ color: '#000', fontSize: '32px', fontWeight: 900, textAlign: 'center', fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '3px', margin: 0 }}>

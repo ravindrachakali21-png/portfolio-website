@@ -1,4 +1,6 @@
+import useWindowSize from '../hooks/useWindowSize'
 function Hero() {
+  const { isMobile } = useWindowSize() 
   const row1 = ['GNER', 'UI', 'DESIGNER', 'UI']
   const row2 = ['DEVELOPER', 'FRONTEND', 'DEV']
   const row3 = ['FRONTEND', 'DESIGNER', 'FRONT']

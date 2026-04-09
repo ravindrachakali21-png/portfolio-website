@@ -9,7 +9,7 @@ import project4 from '../assets/project4.png'
 import project5 from '../assets/project5.png'
 import project6 from '../assets/project6.png'
 import project7 from '../assets/project7.png'
-
+import useWindowSize from '../hooks/useWindowSize'
 const projects = [
   { id: 1, title: 'Portfolio', type: 'Frontend', img: project1, desc: 'This project is a portfolio website developed using React.js. The website is designed to showcase the user\'s skills, projects, and services. It features a modern and clean design with smooth navigation and responsive layout.', features: [{ title: 'Responsive Design:', desc: 'The website is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.' }, { title: 'Modern UI/UX:', desc: 'The website features a modern and clean user interface, providing a pleasant user experience. It uses a consistent color scheme and typography throughout the site.' }], demo: '#', github: '#' },
   { id: 2, title: 'Weather App', type: 'Full Stack', img: project2, desc: 'A full-stack weather application built with NodeJS and ReactJS that delivers real-time weather data with an intuitive interface.', features: [{ title: 'Real-time Data:', desc: 'Fetches live weather data from external APIs providing accurate and up-to-date information for any location worldwide.' }, { title: 'Responsive Design:', desc: 'The app is fully responsive and works seamlessly across desktop and mobile devices.' }], demo: '#', github: '#' },
@@ -20,6 +20,7 @@ const projects = [
   { id: 7, title: 'Playlist Generator', type: 'Frontend', img: project7, desc: 'A Spotify-integrated playlist generator that creates custom playlists based on mood and genre preferences.', features: [{ title: 'Mood Based:', desc: 'Generates playlists tailored to your current mood using smart filtering.' }, { title: 'Spotify Integration:', desc: 'Connects with Spotify API to fetch and create real playlists in your account.' }], demo: '#', github: '#' },
 ]
 function ProjectsPage() {
+  const { isMobile } = useWindowSize() 
   const navigate = useNavigate()
 
   return (

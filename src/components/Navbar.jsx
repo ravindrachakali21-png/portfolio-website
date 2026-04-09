@@ -1,7 +1,9 @@
+import useWindowSize from '../hooks/useWindowSize'
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 function Navbar() {
+  const { isMobile } = useWindowSize() 
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
